@@ -9,13 +9,14 @@ import tensorflow as tf
 tf.device('/gpu:2')
 import matplotlib.pyplot as plt
 from tensorflow import keras
+from loss import generator_loss2
 # Configs
 print('[*] run basic configs ... ')
-save_path = r''   #保存模型路径
+save_path = r''
 save_path = os.path.join(save_path, datetime.datetime.now().strftime("%Y%m%d-%H%M"))
 checkpoint_dir = os.path.join(save_path, "checkpoint")
 best_checkpoint_dir = os.path.join(save_path, "best_checkpoint")
-traindata_path = r''  #数据路径
+traindata_path = r''
 
 batchsize = 10
 EPOCHS =100
